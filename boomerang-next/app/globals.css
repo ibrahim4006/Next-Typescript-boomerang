@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 247, 246, 241;
+  --background-rgb: 247, 246, 241;
+}
+
+/* START: Hero styles */
+.hero {
+  @apply flex-col justify-start border-b-2 border-black relative z-0;
+}
+.square-btn {
+  @apply p-2 hover:bg-[#0D0D0D] hover:p-2 hover:text-[#F7F6F1] cursor-pointer text-sm;
+}
+.square-btn-s {
+  @apply p-2 w-28 rounded-[20px] border-2 border-black font-bold hover:bg-[#0D0D0D] hover:p-2 hover:text-[#F7F6F1] cursor-pointer text-sm;
+}
+.square-btn-m {
+  @apply p-2 w-32 rounded-[20px] border-2 border-black  font-bold hover:bg-[#0D0D0D] hover:p-2 hover:text-[#F7F6F1] cursor-pointer text-sm;
+}
+.square-btn-l {
+  @apply p-2 w-44 rounded-[20px] border-2 border-black  font-bold hover:bg-[#0D0D0D] hover:p-2 hover:text-[#F7F6F1] cursor-pointer text-sm;
+}
+
+
+/* END: Hero styles */
+
+
+/* START: Card Sections */
+/* .entrancecard {
+  @apply border border-red-700 flex-initial w-80 h-96 relative transition transform ease-in-out duration-300 flex-col justify-start;
+} */
+/* .before-top {
+  @apply before:scale-105 before:m-1.5 before:content-none before:absolute before:top-0 before:right-0 before:bottom-[96%] before:w-1 before:border-r  ;
+}
+.after-top {
+  @apply after:scale-105 after:m-1.5 after:content-none after:absolute after:top-0 after:right-0 after:left-[92%] after:h-1 after:border-t  ;
+}
+.before-bottom {
+  @apply before:scale-105 before:m-1.5 before:content-none before:absolute before:top-[92%] before:left-0 before:bottom-0 before:w-1 before:h-1.5 before:border-l  ;
+}
+.after-bottom {
+  @apply after:scale-105 after:m-1.5 after:content-none after:absolute after:bottom-0 after:right-[99%] after:left-0 after:w-2 after:border-t  ;
+} */
+
+.entrancecard {
+  height: 31vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 19em;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  transition: transform 0.4s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 1px;
+  background-color: #f7f6f1;
+  transition: transform 0.4s ease-in-out;
+}
+.entrancecard:hover .background {
+  transform: scale(1.05);
+  background-color: #0d0d0d;
+}
+.entrancecard:hover .frame-top {
+  position: absolute;
+  z-index: -1;
+  top: -30px;
+  left: 0;
+  right: -20px;
+  bottom: 0;
+  background-color: transparent;
+  transition: transform 0.4s ease-in-out;
+}
+.entrancecard:hover .frame-top::before {
+  transform: scale(1.05);
+  margin: 5px;
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 0;
+  right: 0;
+  bottom: 96%;
+  height: 4%;
+  border-right: 1px solid black;
+}
+.entrancecard:hover .frame-top::after {
+  transform: scale(1.05);
+  margin: 5px;
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: 92%;
+  right: -5px;
+  top: 5px;
+  width: 6%;
+  border-top: 1px solid black;
+}
+.entrancecard:hover .frame-bottom {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -25px;
+  right: 0;
+  bottom: -30px;
+  background-color: transparent;
+  transition: transform 0.4s ease-in-out;
+}
+.entrancecard:hover .frame-bottom::before {
+  transform: scale(1.05);
+  margin: 5px;
+  content: "";
+  position: absolute;
+  width: 1px;
+  bottom: 0;
+  left: 0;
+  top: 88%;
+  height: 10%;
+  border-left: 1px solid black;
+}
+.entrancecard:hover .frame-bottom::after {
+  transform: scale(1.05);
+  margin: 5px;
+  content: "";
+  position: absolute;
+  height: 1px;
+  right: 99%;
+  left: -10px;
+  bottom: 5px;
+  width: 10%;
+  border-top: 1px solid black;
+}
+.top-part {
+  flex: 3;
+  border-top: 2px solid black;
+}
+.top-box {
+  border-bottom: 1px solid #0d0d0d;
+  z-index: 4;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  margin-bottom: 5px;
+  text-align: start;
+  padding-top: 15px;
+}
+.top-box p {
+  margin-bottom: 2px;
+}
+.entrancecard:hover .top-box {
+  border-bottom: 1px solid #f7f6f1;
+}
+
+.bottom-part {
+  flex: 9;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+  overflow: scroll;
+}
+.bottom-part::-webkit-scrollbar {
+  display: none;
+}
+.infocard{
+  margin-left: 15px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 5px;
+}
+
+.top-part::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 0;
+  right: 0;
+  bottom: 98%;
+  height: 2%;
+  border-right: 1px solid black;
+}
+
+.top-part::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 0;
+  left: 0;
+  bottom: 98%;
+  height: 2%;
+  border-left: 1px solid black;
+}
+
+.bottom-part::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  bottom: 0;
+  right: 0;
+  top: 98%;
+  height: 2%;
+  border-right: 1px solid black;
+}
+.bottom-part::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  bottom: 0;
+  left: 0;
+  top: 98%;
+  height: 2%;
+  border-left: 1px solid black;
+}
+.bottom-box .bottom-box-info{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.rules{
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.entrancecard:hover {
+  transform: scale(1.05);
+  color: #f7f6f1;
+  background-color: #0d0d0d;
+  font-weight: lighter;
+}
+.entrancecard:hover .top-part {
+  border-top: 2px solid rgba(247, 246, 241, 3);
+}
+.entrancecard:hover .top-part::before {
+  border-right: 1px solid #f7f6f1;
+}
+.entrancecard:hover .top-part::after {
+  border-left: 1px solid #f7f6f1;
+}
+.entrancecard:hover .bottom-part {
+  border-bottom: 2px solid rgba(247, 246, 241, 3);
+}
+.entrancecard:hover .bottom-part::before {
+  border-right: 1px solid #f7f6f1;
+}
+.entrancecard:hover .bottom-part::after {
+  border-left: 1px solid #f7f6f1;
+}
+.entrancecard:hover .bottom-box {
+  border-bottom: 1px solid rgba(247, 246, 241, 0.25);
+}
+
+
+
+
+
+/* END: Card Sections */
+
+
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background:
+      rgb(var(--background-rgb))
+}
