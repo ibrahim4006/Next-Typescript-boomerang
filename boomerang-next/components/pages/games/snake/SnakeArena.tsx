@@ -14,10 +14,8 @@ const SnakeArena = ({
       <canvas
         className='border'
         ref={canvasRef}
-        style={{
-          width: '100%',
-          aspectRatio: `${CANVAS_SIZE[0]} / ${CANVAS_SIZE[1]}`,
-        }}
+        width={`${CANVAS_SIZE[0]}px`}
+        height={`${CANVAS_SIZE[1]}px`}
       />
       <div className="absolute top-[3%] left-[44%] text-[#f7f6f1]">
         <div>Point: {12}</div>

@@ -31,7 +31,7 @@ export const profilSections = [
   "Mini Deneme",
 ];
 
-export const CANVAS_SIZE = [755, 620];
+export const CANVAS_SIZE = [770, 620];
 export const SNAKE_START = [
   [8, 6.5],
   [8, 7],
@@ -42,8 +42,8 @@ export const APPLE_START = [8, 3];
 export const SCALE = 40;
 export const SPEED = 100;
 export const DIRECTIONS = {
-  38: [0, -0.5], // up
-  40: [0, 0.5], // down
-  37: [-0.5, 0], // left
-  39: [0.5, 0], // right
+  ArrowUp: [0, -0.5],
+  ArrowDown: [0, 0.5],
+  ArrowLeft: [-0.5, 0],
+  ArrowRight: [0.5, 0],
 };
