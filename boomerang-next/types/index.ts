@@ -6,6 +6,13 @@ export interface SquareButtonProps {
     handleClick?: MouseEventHandler<HTMLButtonElement> ;
     btnType?: "button" | "submit" ;
 }
+export interface HeroProps {
+    barTitle?: string;
+    pageSubject?: string;
+}
+export interface PanoCardProps {
+    title?: string;
+}
 export interface EntranceCardProps {
     type: string;
     description?: string;

@@ -8,7 +8,7 @@ import React from "react";
 const Mesajlar = () => {
   return (
     <main>
-      <Hero />
+      <Hero barTitle="Mesajlar" pageSubject="MESAJLAR"/>
       <div className="flex">
         <div className="flex-1 h-[60vw] border flex-col">
             <Search />

@@ -1,9 +1,21 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 
 import SquareButton from "./SquareButton";
+import {useState} from 'react'
+import PanoCard from "./PanoCard";
 
 const Navbar = () => {
+  const [showPano, setShowPano] = useState(false);
+
+  const handleClickPano = () => {
+    if (!showPano) {
+      setShowPano(true);
+    } else {
+      setShowPano(false);
+    }
+  };
   return (
     <header className="w-full relative z-10 border-b-2 border-black">
       <nav className="max-w-full flex justify-between items-center">
@@ -20,7 +32,7 @@ const Navbar = () => {
           <Link href="/mesajlar"><SquareButton title="Mesajlar" containerStyles={`square-btn`} /></Link>
           <SquareButton title="Arşiv" containerStyles={`square-btn`} />
           <SquareButton title="Kürsü" containerStyles={`square-btn`} />
-          <SquareButton title="Takvim" containerStyles={`square-btn`} />
+          <SquareButton title="Takvim" containerStyles={`square-btn`}/>
           <Image
             src="/headerpolygon.svg"
             alt="Polygon logo"
@@ -34,7 +46,15 @@ const Navbar = () => {
             width={25}
             height={25}
             className="object-contain cursor-pointer ml-8"
+            onClick={handleClickPano} 
           />
+          {showPano && (
+            <div className="absolute right-0 top-12 w-[30%] h-[47vw] bg-[#0D0D0D] pt-5 flex-col justify-start space-y-14">
+              <PanoCard title="TYT" />
+              <PanoCard title="AYT" />
+              <PanoCard title="Yarışma" />
+            </div>
+          )}
         </div>
       </nav>
     </header>

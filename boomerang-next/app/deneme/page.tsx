@@ -50,7 +50,7 @@ const GenelDeneme = () => {
 
   return (
     <main>
-      <Hero />
+      <Hero pageSubject="MİNİ DENEME" barTitle="Mini Deneme"/>
       <LessonPart
         setActiveLesson={setActiveLesson}
         studentAnswer={studentAnswer}

@@ -9,7 +9,7 @@ const Search = () => {
       <div className="basis-3/4 flex justify-start items-center ml-[5%] relative">
         <input
           type="text"
-          className="bg-transparent rounded-tl-md rounded-bl-md border w-[85%] h-8 flex"
+          className="bg-transparent rounded-tl-md rounded-bl-md border w-[85%] h-8 flex p-3"
           onChange={(e) => setUserName(e.target.value)}
           placeholder="Find a user"
           value={userName}

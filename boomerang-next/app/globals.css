@@ -306,12 +306,18 @@
 
 /* End: Deneme Sections */
 
+
+/* Start: Message Sections */
+
 .message {
   @apply bg-[#F7F6F1] text-[#000000] w-[40%] h-12 rounded-md flex justify-start items-center pl-2.5 mt-3.5 ml-5 border border-[#F7F6F1] ;
 }
 .owner {
   @apply flex-row-reverse bg-[#0D0D0D] text-[#F7F6F1] flex justify-end items-center ml-[57.5%] font-light border-[#F7F6F1] border;
 }
+
+/* End: Message Sections */
+
 
 
 @media (prefers-color-scheme: dark) {

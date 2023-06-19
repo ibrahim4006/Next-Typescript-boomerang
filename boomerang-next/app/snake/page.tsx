@@ -140,7 +140,7 @@ const Snake = () => {
 
   return (
     <main>
-      <Hero />
+      <Hero pageSubject="YILAN" barTitle="Yılan"/>
       <div className="flex relative w-full">
         <div
           className="flex-1 bg-[#0d0d0d] flex text-[#f7f6f1]"
