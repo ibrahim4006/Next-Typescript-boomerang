@@ -17,7 +17,7 @@ const Navbar = () => {
           />
         </Link>
         <div className="flex justify-center items-center space-x-4 font-medium text-sm mr-6">
-          <SquareButton title="Mesajlar" containerStyles={`square-btn`} />
+          <Link href="/mesajlar"><SquareButton title="Mesajlar" containerStyles={`square-btn`} /></Link>
           <SquareButton title="Arşiv" containerStyles={`square-btn`} />
           <SquareButton title="Kürsü" containerStyles={`square-btn`} />
           <SquareButton title="Takvim" containerStyles={`square-btn`} />

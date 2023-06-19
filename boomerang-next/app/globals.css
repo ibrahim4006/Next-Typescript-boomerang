@@ -11,6 +11,7 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
+  border-color: black;
 }
 *::-webkit-scrollbar {
   display: none;
@@ -45,21 +46,6 @@
 
 
 /* START: Card Sections */
-/* .entrancecard {
-  @apply border border-red-700 flex-initial w-80 h-96 relative transition transform ease-in-out duration-300 flex-col justify-start;
-} */
-/* .before-top {
-  @apply before:scale-105 before:m-1.5 before:content-none before:absolute before:top-0 before:right-0 before:bottom-[96%] before:w-1 before:border-r  ;
-}
-.after-top {
-  @apply after:scale-105 after:m-1.5 after:content-none after:absolute after:top-0 after:right-0 after:left-[92%] after:h-1 after:border-t  ;
-}
-.before-bottom {
-  @apply before:scale-105 before:m-1.5 before:content-none before:absolute before:top-[92%] before:left-0 before:bottom-0 before:w-1 before:h-1.5 before:border-l  ;
-}
-.after-bottom {
-  @apply after:scale-105 after:m-1.5 after:content-none after:absolute after:bottom-0 after:right-[99%] after:left-0 after:w-2 after:border-t  ;
-} */
 
 .entrancecard {
   height: 31vw;
@@ -281,11 +267,10 @@
   border-bottom: 1px solid rgba(247, 246, 241, 0.25);
 }
 
-
-
-
-
 /* END: Card Sections */
+
+
+/* Start: Deneme Sections */
 
 .lessonprogresscard {
   top: 100%;
@@ -319,6 +304,14 @@
   margin-top: -60px;
 }
 
+/* End: Deneme Sections */
+
+.message {
+  @apply bg-[#F7F6F1] text-[#000000] w-[40%] h-12 rounded-md flex justify-start items-center pl-2.5 mt-3.5 ml-5 border border-[#F7F6F1] ;
+}
+.owner {
+  @apply flex-row-reverse bg-[#0D0D0D] text-[#F7F6F1] flex justify-end items-center ml-[57.5%] font-light border-[#F7F6F1] border;
+}
 
 
 @media (prefers-color-scheme: dark) {
