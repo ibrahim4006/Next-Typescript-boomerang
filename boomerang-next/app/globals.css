@@ -29,16 +29,22 @@
   @apply flex-col justify-start border-b-2 border-black relative z-0;
 }
 .square-btn {
-  @apply p-2 hover:bg-[#0D0D0D] hover:p-2 hover:text-[#F7F6F1] cursor-pointer text-sm;
+  @apply p-2 hover:bg-[#0D0D0D] hover:p-2 hover:text-[#F7F6F1] cursor-pointer text-sm active:bg-[#0D0D0D];
 }
 .square-btn-s {
-  @apply p-2 w-28 rounded-[20px] border-2 border-black font-bold hover:bg-[#0D0D0D] hover:p-2 hover:text-[#F7F6F1] cursor-pointer text-sm;
+  @apply p-2 w-28 rounded-[20px] border-2 border-black font-bold hover:bg-[#0D0D0D] hover:p-2 hover:text-[#F7F6F1] cursor-pointer text-sm active:bg-[#0D0D0D];
 }
 .square-btn-m {
-  @apply p-2 w-32 rounded-[20px] border-2 border-black  font-bold hover:bg-[#0D0D0D] hover:p-2 hover:text-[#F7F6F1] cursor-pointer text-sm;
+  @apply p-2 w-32 rounded-[20px] border-2 border-black  font-bold hover:bg-[#0D0D0D] hover:p-2 hover:text-[#F7F6F1] cursor-pointer text-sm active:bg-[#0D0D0D];
 }
 .square-btn-l {
-  @apply p-2 w-44 rounded-[20px] border-2 border-black  font-bold hover:bg-[#0D0D0D] hover:p-2 hover:text-[#F7F6F1] cursor-pointer text-sm;
+  @apply p-2 w-44 rounded-[20px] border-2 border-black  font-bold hover:bg-[#0D0D0D] hover:p-2 hover:text-[#F7F6F1] cursor-pointer text-sm active:bg-[#0D0D0D];
+}
+.circle-outer {
+  @apply h-10 w-10 rounded-full bg-[#F7F6F1] border flex justify-center items-center;
+}
+.circle-inner {
+  @apply h-6 w-6 rounded-full bg-[#0D0D0D]  text-[#F7F6F1] flex justify-center items-center;
 }
 
 

@@ -1,3 +1,4 @@
+"use client"
 import { Hero } from "@/components/common";
 import Chats from "@/components/pages/mesajlar/Chats";
 import InputMessage from "@/components/pages/mesajlar/InputMessage";

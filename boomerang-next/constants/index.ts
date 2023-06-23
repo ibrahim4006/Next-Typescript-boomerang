@@ -7,7 +7,7 @@ export const lessons = [
   "Tarih",
   "Coğrafya",
   "Felsefe",
-  "Din Kültürü ve Ahlak Bilgisi",
+  "Din",
 ];
 export const sayisal = ["Matematik", "Fizik", "Kimya", "Biyoloji"];
 export const months = [
