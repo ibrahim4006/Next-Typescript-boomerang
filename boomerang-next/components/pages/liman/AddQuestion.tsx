@@ -10,10 +10,10 @@ const AddQuestion = ({
   setisAddQuestionPageShow,
   setisPreviewPageShow,
   ischoicePageOpen,
-  setischoicePageOpen
-}: AddQuestionProps) => {
-  const [preview, setPreview] = useState<File | null>(null);
-  
+  setischoicePageOpen,
+  preview,
+  setPreview,
+}: AddQuestionProps) => { 
 
   const handleChangeImage = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (!event.target.files) return;
@@ -62,18 +62,18 @@ const AddQuestion = ({
             </form>
           </div>
         ) : (
-          <SetQuestionChoices />
+          <SetQuestionChoices preview={preview}/>
         )}
         <div className="flex justify-start items-center space-x-5 h-20 pl-5 relative">
           <SquareButton
             title="Image Upload"
-            containerStyles="square-btn-m"
-            handleClick={() => setischoicePageOpen(true)}
+            containerStyles={ischoicePageOpen ? "square-btn-m active" : "square-btn-m"}
+            handleClick={() => {setischoicePageOpen(true); setisPreviewPageShow(false);}}
           />
           <SquareButton
             title="Seçenekleri Ayarla"
-            containerStyles="square-btn-l"
-            handleClick={() => setischoicePageOpen(false)}
+            containerStyles={!ischoicePageOpen ? "square-btn-l active" : "square-btn-l"}
+            handleClick={() => {setischoicePageOpen(false); setisPreviewPageShow(false);}}
           />
           <div className="absolute right-10">
             <SquareButton

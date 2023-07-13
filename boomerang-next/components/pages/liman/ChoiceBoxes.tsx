@@ -1,18 +1,23 @@
-import React from 'react'
+import { ChoiceBoxesProps } from "@/types";
+import React from "react";
 
-const ChoiceBoxes = () => {
+const ChoiceBoxes = ({ points, direction }: ChoiceBoxesProps) => {
+  const className = `flex-col w-32 h-10 border ${
+    points
+      ? direction === "left"
+        ? "rounded-l-lg"
+        : "rounded-r-lg"
+      : direction === "left"
+      ? "rounded-l-lg opacity-[0.15]"
+      : "rounded-r-lg opacity-[0.15]"
+  } flex items-center justify-center`;
+
   return (
-    <div className='flex justify-center items-center space-x-5'>
-        <div className='circle-outer'>
-            <div className='circle-inner'>A</div>
-        </div>
-        <div className='flex w-40 h-8 justify-center items-center border rounded-lg'>
-            <div className='basis-1/2 border-r h-full flex justify-center items-center'>48.96%</div>
-            <div className='basis-1/2 flex justify-center items-center'>64.12%</div>
-        </div>
-      
+    <div className={className}>
+      {points && <p className="basis-1/2 text-sm ">x:{points.x.toFixed(2)}%</p>}
+      {points && <p className="basis-1/2 text-sm ">y:{points.y.toFixed(2)}%</p>}
     </div>
-  )
-}
+  );
+};
 
-export default ChoiceBoxes
+export default ChoiceBoxes;

@@ -7,6 +7,12 @@ const PreviewPage = ({
   isAddQuestionPageShow,
   setisAddQuestionPageShow,
   setisPreviewPageShow,
+  classes,
+  subject,
+  chapter,
+  lesson,
+  difficulty,
+  preview,
 }: PreviewPageProps) => {
   return (
     <div className="w-2/3 ml-auto mr-auto border mt-[5%] mb-[5%] flex-col justify-start">
@@ -15,13 +21,22 @@ const PreviewPage = ({
       </div>
       <div className="flex justify-start items-center h-auto w-full border-b">
         <Image
-          src="/example.svg"
+          src={preview === null ? "" : URL.createObjectURL(preview)}
           alt="Preview image"
-          className="basis-1/2 object-cover border-r p-5"
+          className="object-cover ml-auto mr-auto"
           width={450}
           height={450}
         />
-        <div>HEllo world</div>
+        <div className="flex flex-col justify-start pl-5 space-y-5">
+          <SquareButton title={classes} containerStyles="square-btn-m active" />
+          <SquareButton title={lesson} containerStyles="square-btn-m active" />
+          <SquareButton title={chapter} containerStyles="square-btn-m active" />
+          <SquareButton title={subject} containerStyles="square-btn-m active" />
+          <SquareButton
+            title={difficulty}
+            containerStyles="square-btn-m active"
+          />
+        </div>
       </div>
       <div className="flex justify-start items-center space-x-5 h-20 pl-5 relative">
         <SquareButton

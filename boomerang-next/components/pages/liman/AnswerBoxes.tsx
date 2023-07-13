@@ -1,11 +1,16 @@
-import React from "react";
+import { AnswerBoxesProps } from "@/types";
+import React, { useState } from "react";
 
-const AnswerBoxes = () => {
+const AnswerBoxes = ({
+  choice,
+  containerStyles,
+  handleClick,
+}: AnswerBoxesProps) => {
   return (
-    <div className="circle-outer relative">
+    <button className={containerStyles} onClick={handleClick}>
       <hr className="absolute w-11 border -right-11"></hr>
-      <div className="circle-inner">A</div>
-    </div>
+      <div className="circle-inner">{choice}</div>
+    </button>
   );
 };
 
