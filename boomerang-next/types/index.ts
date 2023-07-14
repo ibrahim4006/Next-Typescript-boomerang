@@ -128,11 +128,14 @@ export interface SetQuestionChoicesProps {
 export interface ChoiceBoxesProps {
   points: Point;
   direction: string;
+  handleClick: MouseEventHandler<HTMLDivElement>;
+  isActive: boolean;
 }
 export interface AnswerBoxesProps {
   choice: string;
   containerStyles?: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
+  isOpen: boolean
 }
 
 /* End: Liman Sections */

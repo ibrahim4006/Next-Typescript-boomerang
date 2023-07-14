@@ -5,10 +5,11 @@ const AnswerBoxes = ({
   choice,
   containerStyles,
   handleClick,
+  isOpen
 }: AnswerBoxesProps) => {
   return (
     <button className={containerStyles} onClick={handleClick}>
-      <hr className="absolute w-11 border -right-11"></hr>
+     { isOpen && <hr className="absolute w-10 border -right-7"></hr>}
       <div className="circle-inner">{choice}</div>
     </button>
   );

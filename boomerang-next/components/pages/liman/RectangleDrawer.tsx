@@ -76,7 +76,7 @@ export default function RectangleDrawer({
             className="object-cover"
             width={350}
             height={250}
-            onClick={handleClick}
+            {...(points.length < 10 && { onClick: handleClick })}
             ref={imageRef}
           />
         )}
